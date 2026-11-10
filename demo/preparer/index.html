@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IntelliTax™ — Intellisoft Technologies</title>
+  <meta name="description" content="IntelliTax: prepare, check and file your federal and state return with a professional review. IntelliITP: plan next year's taxes.">
+  <meta name="theme-color" content="#102a4c">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/config.js"></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="loader" role="status" aria-live="polite">
+    <div class="card">
+      <div class="brand"><i></i><span id="brandName">IntelliTax™</span></div>
+      <p id="loadMsg">Opening your secure workspace…</p>
+      <div class="bar"><span></span></div>
+      <p id="slow" class="muted" hidden>This is taking longer than usual. <a href="" id="retry">Try again</a></p>
+    </div>
+  </div>
+  <iframe id="app" title="IntelliTax" allow="clipboard-read; clipboard-write; camera; fullscreen; payment" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <noscript><div class="nojs">IntelliTax needs JavaScript. Please turn it on in your browser and reload this page.</div></noscript>
+</body>
+</html>

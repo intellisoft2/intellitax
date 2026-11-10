@@ -1,0 +1,23 @@
+:root { --navy: #102a4c; --blue: #2f6fed; --ink: #1b2533; --muted: #5b6878; --bg: #f4f6fa; }
+html, body { margin: 0; height: 100%; background: var(--bg); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); }
+#app { position: fixed; inset: 0; width: 100%; height: 100%; height: 100dvh; border: 0; display: block; background: #fff; }
+#loader { position: fixed; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 16px; background: var(--bg); transition: opacity .35s ease; }
+#loader.done { opacity: 0; pointer-events: none; }
+.card { width: 100%; max-width: 380px; background: #fff; border-radius: 14px; padding: 28px 26px; box-shadow: 0 10px 30px rgba(16, 42, 76, .10); text-align: center; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.35rem; color: var(--navy); }
+.brand i { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg, var(--blue), var(--navy)); display: inline-block; }
+#loadMsg { margin: 14px 0 16px; color: var(--muted); }
+.bar { height: 8px; border-radius: 99px; background: #e3e8f0; overflow: hidden; }
+.bar span { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--blue), var(--navy)); animation: grow 6s cubic-bezier(.2, .7, .3, 1) forwards; }
+@keyframes grow { 0% { width: 4% } 40% { width: 55% } 100% { width: 92% } }
+.muted { color: var(--muted); font-size: .9rem; margin: 14px 0 0; }
+a { color: var(--blue); }
+.nojs { position: fixed; inset: 0; z-index: 3; background: #fff; padding: 40px 20px; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .bar span { animation: none; width: 60%; } #loader { transition: none; } }
+
+/* IntelliTax 2.5.13: premium indeterminate loading animation, not simulated progress */
+#loader .card{border:1px solid rgba(255,255,255,.8);box-shadow:0 20px 55px rgba(16,42,76,.10);backdrop-filter:blur(12px)}
+#loader .bar{height:9px;background:#e4eaf4;position:relative;overflow:hidden}
+#loader .bar span{width:40%;position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#4f8dfb,#1c57bc,#102a4c);box-shadow:0 0 16px rgba(47,111,237,.28);animation:itx-loading-wave 1.65s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes itx-loading-wave{0%{transform:translateX(-110%)}100%{transform:translateX(260%)}}
+@media(prefers-reduced-motion:reduce){#loader .bar span{animation:none;transform:none;width:65%}}
